@@ -1,0 +1,87 @@
+/* General Navbar Styles */
+.navbar {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient background */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Navbar List Styles */
+  .navbar-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar Item Styles */
+  .navbar-item {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Navbar Link Styles */
+  .navbar-link {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .navbar-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    color: #ff9f00; /* Text color change on hover */
+    transform: translateY(-5px); /* Lift effect */
+  }
+  
+  .navbar-item:hover {
+    transform: scale(1.1); /* Slight zoom on item hover */
+  }
+  
+  /* Mobile First Navbar */
+  .navbar-hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+  
+  .navbar-hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  
+  .navbar-hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar-hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar-link {
+      padding: 12px 20px;
+    }
+  }
+  
