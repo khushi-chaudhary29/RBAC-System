@@ -1,133 +1,160 @@
 /* General Page Styles */
 .home-page {
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-    background: linear-gradient(45deg, #4e73df, #224abe); /* Elegant gradient with blues */
-    padding: 0;
-    margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #f5f5f5; /* Light text for readability */
+  background: linear-gradient(135deg, #243b55, #141e30); /* Sleek dark blue gradient */
+  margin: 0;
+  padding: 0;
 }
 
-/* Hero Section with Video Background */
+/* Hero Section */
 .hero-section {
-    background: url('https://via.placeholder.com/1920x1080') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+  background: linear-gradient(
+      rgba(36, 59, 85, 0.9),
+      rgba(20, 30, 48, 0.9)
+    ),
+    url('https://via.placeholder.com/') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-/* Hero Section Title */
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin: 0;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    color: #fff; /* White for contrast */
-    animation: slideIn 1.5s ease-out;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #ffcb47; /* Warm golden color */
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+  animation: slideIn 1.5s ease-out;
 }
 
-/* Hero Section Description */
 .hero-description {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    max-width: 700px;
-    line-height: 1.6;
-    color: #ddd; /* Light grey for readability */
+  font-size: 1.2rem;
+  margin: 15px 0;
+  max-width: 700px;
+  line-height: 1.6;
+  color: #dcdcdc; /* Softer white */
 }
 
-/* Call to Action Button */
 .cta-button {
-    background-color: #27a1e1; /* Calm blue shade */
-    color: white;
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-    animation: bounce 1s infinite alternate;
+  background: linear-gradient(45deg, #ffcb47, #ffb300); /* Warm gradient */
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Hover Effects */
 .cta-button:hover {
-    background-color: #1d8bc0; /* Darker shade on hover */
-    transform: translateY(-5px); /* Lift effect */
+  background: linear-gradient(45deg, #e6ac00, #cc9a00); /* Slightly darker gradient */
+  transform: translateY(-5px); /* Lift effect */
 }
 
-/* Bounce Animation */
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-    100% { transform: translateY(0); }
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #ffcb47;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #dcdcdc;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Features Section */
 .features-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px 20px;
-    background-color: #f8f9fa; /* Light, neutral background */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1c2e44, #243b55); /* Cool blue gradient */
 }
 
-/* Individual Feature Cards */
 .feature {
-    background: #fff;
-    color: #333; /* Darker text for better readability */
-    border-radius: 8px;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+  background: #2a3d66; /* Deep blue for cards */
+  color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
 }
 
 .feature:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.05); /* Slight zoom */
 }
 
 .feature h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #4e73df; /* Blue for a cohesive theme */
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffcb47; /* Accent golden color */
 }
 
 .feature p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555; /* Subtle grey text */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #dcdcdc;
+}
+
+/* Additional Information Cards */
+.additional-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1c2e44, #243b55); /* Cool blue gradient */
+}
+
+.info-card {
+  background: #2a3d66; /* Deep blue for cards */
+  color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.info-card:hover {
+  transform: scale(1.05); /* Slight zoom */
+}
+
+.info-card h3 {
+  font-size: 1.6rem;
+  color: #ffcb47;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: #dcdcdc;
 }
 
 /* Footer Section */
 .footer {
-    background-color: #333;  /* Dark footer for contrast */
-    padding: 40px 20px;
-    text-align: center;
-    font-size: 1rem;
-    color: #fff;  /* Light text on dark background */
-    margin-top: 30px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer Text */
-.footer p {
-    color: #ddd;  /* Slightly lighter text color */
-}
-
-/* Animations for sliding in */
-@keyframes slideIn {
-    from { transform: translateY(100px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+  background: linear-gradient(135deg, #141e30, #243b55); /* Matching gradient */
+  padding: 40px 20px;
+  text-align: center;
+  color: #f5f5f5;
+  font-size: 1rem;
+  margin-top: 30px;
 }
