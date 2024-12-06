@@ -1,8 +1,9 @@
 /* General Page Styles */
 .home-page {
   font-family: 'Roboto', sans-serif;
-  color: #f5f5f5; /* Light text for readability */
-  background: linear-gradient(135deg, #243b55, #141e30); /* Sleek dark blue gradient */
+  color: #f5f5f5;
+  background: #243b55;
+  background: linear-gradient(135deg, #243b55, #141e30);
   margin: 0;
   padding: 0;
 }
@@ -10,10 +11,10 @@
 /* Hero Section */
 .hero-section {
   background: linear-gradient(
-      rgba(36, 59, 85, 0.9),
-      rgba(20, 30, 48, 0.9)
+      rgba(36, 59, 85, 0.8),
+      rgba(20, 30, 48, 0.8)
     ),
-    url('https://via.placeholder.com/') no-repeat center center;
+    url('https://via.placeholder.com/1500x800') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
@@ -28,9 +29,8 @@
   font-size: 3.5rem;
   font-weight: bold;
   margin: 0;
-  color: #ffcb47; /* Warm golden color */
+  color: #ffcb47;
   text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
-  animation: slideIn 1.5s ease-out;
 }
 
 .hero-description {
@@ -38,11 +38,11 @@
   margin: 15px 0;
   max-width: 700px;
   line-height: 1.6;
-  color: #dcdcdc; /* Softer white */
+  color: #dcdcdc;
 }
 
 .cta-button {
-  background: linear-gradient(45deg, #ffcb47, #ffb300); /* Warm gradient */
+  background: linear-gradient(45deg, #ffcb47, #ffb300);
   color: white;
   padding: 12px 30px;
   font-size: 1.1rem;
@@ -55,8 +55,8 @@
 }
 
 .cta-button:hover {
-  background: linear-gradient(45deg, #e6ac00, #cc9a00); /* Slightly darker gradient */
-  transform: translateY(-5px); /* Lift effect */
+  background: linear-gradient(45deg, #e6ac00, #cc9a00);
+  transform: translateY(-5px);
 }
 
 /* Section Header */
@@ -66,7 +66,7 @@
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ffcb47;
   margin-bottom: 10px;
 }
@@ -81,31 +81,33 @@
 /* Features Section */
 .features-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 30px;
   padding: 50px 20px;
-  background: linear-gradient(135deg, #1c2e44, #243b55); /* Cool blue gradient */
+  /* background: rgba(28, 37, 46, 0.9); */
 }
 
 .feature {
-  background: #2a3d66; /* Deep blue for cards */
+  background: #2a3d66;
   color: #f5f5f5;
   border-radius: 8px;
   padding: 20px;
-  width: 30%;
+  width: calc(30% - 40px);
+  min-width: 280px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
 }
 
 .feature:hover {
-  transform: scale(1.05); /* Slight zoom */
+  transform: scale(1.05);
 }
 
 .feature h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  color: #ffcb47; /* Accent golden color */
+  color: #ffcb47;
 }
 
 .feature p {
@@ -114,28 +116,54 @@
   color: #dcdcdc;
 }
 
-/* Additional Information Cards */
+/* Toggle Button Section */
+.toggle-button-section {
+  text-align: center;
+  padding: 30px 20px;
+  /* background: #1c2e44; */
+}
+
+.toggle-button {
+  background: linear-gradient(45deg, #ffcb47, #ffb300);
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-button:hover {
+  background: linear-gradient(45deg, #e6ac00, #cc9a00);
+  transform: translateY(-3px);
+}
+
+/* Additional Information Section */
 .additional-info {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #1c2e44, #243b55); /* Cool blue gradient */
+  /* background: #1c2e44; */
 }
 
 .info-card {
-  background: #2a3d66; /* Deep blue for cards */
+  background: #243b55;
   color: #f5f5f5;
   border-radius: 8px;
   padding: 20px;
-  width: 30%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
+  width: calc(30% - 20px);
+  min-width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease-in-out, background 0.3s ease;
 }
 
 .info-card:hover {
-  transform: scale(1.05); /* Slight zoom */
+  transform: scale(1.05);
+  background: #2a3d66;
 }
 
 .info-card h3 {
@@ -147,14 +175,4 @@
 .info-card p {
   font-size: 1rem;
   color: #dcdcdc;
-}
-
-/* Footer Section */
-.footer {
-  background: linear-gradient(135deg, #141e30, #243b55); /* Matching gradient */
-  padding: 40px 20px;
-  text-align: center;
-  color: #f5f5f5;
-  font-size: 1rem;
-  margin-top: 30px;
 }

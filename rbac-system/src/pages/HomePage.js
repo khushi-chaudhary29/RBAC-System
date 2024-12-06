@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/HomePage.css'; // Import the updated HomePage CSS
 
 const HomePage = () => {
+  const [showAdditionalInfo, setShowAdditionalInfo] = useState(false);
+
+  const handleToggleInfo = () => {
+    setShowAdditionalInfo(!showAdditionalInfo);
+  };
+
   return (
     <div className="home-page">
       <div className="hero-section">
@@ -34,24 +40,30 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="additional-info">
-        <div className="info-card">
-          <h3>Advanced User Insights</h3>
-          <p>Gain detailed insights into user behavior, activities, and access patterns for better security management.</p>
-        </div>
-        <div className="info-card">
-          <h3>Role-Based Reporting</h3>
-          <p>Generate comprehensive reports based on roles and permissions, helping you track and audit access controls.</p>
-        </div>
-        <div className="info-card">
-          <h3>Customizable Settings</h3>
-          <p>Tailor the system’s user, role, and permission settings to meet the unique needs of your organization.</p>
-        </div>
+      {/* Toggle Button for Additional Info */}
+      <div className="toggle-button-section">
+        <button className="toggle-button" onClick={handleToggleInfo}>
+          {showAdditionalInfo ? 'Hide Additional Info' : 'Show Additional Info'}
+        </button>
       </div>
 
-      <div className="footer">
-        <p>RBAC System - Your trusted Role-Based Access Control solution.</p>
-      </div>
+      {/* Conditional Rendering for Additional Info */}
+      {showAdditionalInfo && (
+        <div className="additional-info">
+          <div className="info-card">
+            <h3>Advanced User Insights</h3>
+            <p>Gain detailed insights into user behavior, activities, and access patterns for better security management.</p>
+          </div>
+          <div className="info-card">
+            <h3>Role-Based Reporting</h3>
+            <p>Generate comprehensive reports based on roles and permissions, helping you track and audit access controls.</p>
+          </div>
+          <div className="info-card">
+            <h3>Customizable Settings</h3>
+            <p>Tailor the system’s user, role, and permission settings to meet the unique needs of your organization.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

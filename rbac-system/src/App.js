@@ -7,6 +7,7 @@ import AdminPage from './pages/AdminPage';
 import HomePage from './pages/HomePage';
 import { UserProvider } from './context/UserContext';
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/role-management" element={<RoleManagement />} />
           <Route path="/user-management" element={<UserManagement />} />
         </Routes>
+        <Footer />
       </Router>
     </UserProvider>
   );
