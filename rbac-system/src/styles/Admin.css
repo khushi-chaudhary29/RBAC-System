@@ -1,15 +1,41 @@
 /* Admin Page Styles */
 .admin-dashboard {
-  padding: 20px;
+  padding: 30px;
   font-family: 'Arial', sans-serif;
   color: #333;
+  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.admin-dashboard:hover {
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
 }
 
 h1 {
-  color: #2a3d66;
+  color: #3e4a61;
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #ffcb47;
+  border-radius: 2px;
 }
 
 p {
@@ -26,33 +52,44 @@ table {
 }
 
 th, td {
-  padding: 12px;
+  padding: 14px;
   text-align: left;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
+  border-radius: 8px;
 }
 
 th {
   background-color: #f4f4f4;
   color: #333;
+  font-weight: 600;
 }
 
 td {
   background-color: #fafafa;
+  font-size: 16px;
+  color: #333;
 }
 
+/* Button Styles */
 button {
-  padding: 8px 15px;
-  margin: 5px;
-  font-size: 1rem;
+  padding: 14px 28px;
+  font-size: 18px;
   cursor: pointer;
   border: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
   background-color: #0056b3;
   color: white;
+  transform: translateY(-3px);
+}
+
+button:active {
+  background-color: #003d73;
+  transform: translateY(3px);
 }
 
 /* Edit/Delete Buttons */
@@ -72,7 +109,7 @@ button:hover {
   background-color: #c82333;
 }
 
-/* User Management Section */
+/* User and Role Management Section */
 .user-management, .role-management {
   margin-bottom: 50px;
 }
@@ -83,14 +120,19 @@ button:hover {
 }
 
 select {
-  padding: 5px 10px;
-  font-size: 1rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-button {
-  cursor: pointer;
+select:focus {
+  border-color: #ffcb47;
+  box-shadow: 0 0 8px rgba(255, 203, 71, 0.6);
+  outline: none;
 }
 
 /* Role Permissions Styling */
@@ -100,4 +142,5 @@ button {
   padding: 5px 10px;
   border-radius: 4px;
   margin-right: 5px;
+  font-size: 16px;
 }

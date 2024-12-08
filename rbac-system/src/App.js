@@ -6,7 +6,6 @@ import UserManagement from './components/UserManagement';
 import AdminPage from './pages/AdminPage';
 import HomePage from './pages/HomePage';
 import { UserProvider } from './context/UserContext';
-import './App.css';
 import Footer from './components/Footer';
 
 function App() {
