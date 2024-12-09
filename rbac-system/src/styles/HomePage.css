@@ -86,7 +86,6 @@
   flex-wrap: wrap;
   gap: 30px;
   padding: 50px 20px;
-  /* background: rgba(28, 37, 46, 0.9); */
 }
 
 .feature {
@@ -120,7 +119,6 @@
 .toggle-button-section {
   text-align: center;
   padding: 30px 20px;
-  /* background: #1c2e44; */
 }
 
 .toggle-button {
@@ -147,7 +145,6 @@
   flex-wrap: wrap;
   gap: 30px;
   padding: 40px 20px;
-  /* background: #1c2e44; */
 }
 
 .info-card {
@@ -175,4 +172,94 @@
 .info-card p {
   font-size: 1rem;
   color: #dcdcdc;
+}
+
+
+/* Responsive Styles for Mobile View */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .features-section,
+  .additional-info {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .feature,
+  .info-card {
+    width: 100%; /* Use full width for better usability */
+    margin-bottom: 20px; /* Add spacing between cards */
+    min-height: 200px; /* Add a minimum height to maintain card size */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px;
+  }
+
+  .feature {
+    width: 85%; /* Adjust width for smaller screens */
+    margin: 15px auto; /* Center cards with margin */
+    height: auto; /* Ensure the card height increases with content */
+    min-height: 220px; /* Min height for consistency */
+  }
+
+  .feature h2,
+  .info-card h3 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .feature p,
+  .info-card p {
+    font-size: 0.9rem; /* Reduce font size slightly */
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .toggle-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+/* Adjustments for 320px screen width */
+@media (max-width: 320px) {
+  .features-section {
+    flex-direction: column; /* Stack features vertically */
+    padding: 10px 15px;
+  }
+
+  .feature {
+    width: 40px; /* Make features occupy a smaller width */
+    margin-bottom: 15px;
+    padding: 10px; /* Reduce padding for smaller cards */
+  }
+
+  .feature h2 {
+    font-size: 1.3rem; /* Reduce heading size further */
+  }
+
+  .feature p {
+    font-size: 0.75rem; /* Reduce font size for better fit */
+  }
+
+  .toggle-button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
 }

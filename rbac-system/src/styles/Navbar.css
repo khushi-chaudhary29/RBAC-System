@@ -11,53 +11,92 @@
   align-items: center;
 }
 
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #f0f8ff;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1100; /* Ensure it stays above the menu */
+}
+
 /* Navbar List Styles */
 .navbar-list {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Ensure items are centered */
   align-items: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  gap: 30px; /* More space between items */
+  gap: 30px;
+  transition: transform 0.3s ease-in-out; /* Smooth open/close animation */
 }
 
-/* Navbar Item Styles */
-.navbar-item {
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Navbar Link Styles */
+/* Navbar Links */
 .navbar-link {
-  color: #f0f8ff; /* Light text for contrast */
+  color: #f0f8ff;
   font-size: 1.1rem;
   text-decoration: none;
   padding: 12px 18px;
   border-radius: 5px;
-  font-weight: 500; /* Slightly bold */
-  text-transform: capitalize; /* Neater capitalization */
+  font-weight: 500;
+  text-transform: capitalize;
   transition: color 0.3s, background-color 0.3s;
 }
 
 .navbar-link:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Light translucent background */
-  color: #ffcb47; /* Warm golden text on hover */
-  transform: translateY(-3px); /* Subtle lift effect */
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffcb47;
 }
 
-.navbar-item:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-}
-
-/* Mobile Navbar Adjustments */
+/* Mobile Navbar Styles */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show the toggle button */
+  }
+
   .navbar-list {
-    flex-direction: column; /* Stack items */
-    gap: 15px; /* Less space between stacked items */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, #2a3d66, #4a5d88);
+    padding: 20px 0;
+    transform: translateY(-100%); /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+
+  .navbar-list.open {
+    transform: translateY(0); /* Slide down when open */
+    opacity: 1;
+    visibility: visible;
   }
 
   .navbar-link {
     font-size: 1rem;
     padding: 10px 15px;
+    width: 100%;
+    text-align: center; /* Center align for mobile links */
+  }
+}
+
+/* Default Laptop View Adjustments */
+@media (min-width: 769px) {
+  .navbar {
+    justify-content: center; /* Ensure navbar items are centered */
+  }
+
+  .navbar-list {
+    flex-direction: row; /* Ensure horizontal layout */
+    position: static; /* Remove absolute positioning */
+    transform: none; /* Reset any mobile-specific transformations */
+    opacity: 1;
+    visibility: visible;
   }
 }

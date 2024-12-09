@@ -144,3 +144,107 @@ select:focus {
   margin-right: 5px;
   font-size: 16px;
 }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .admin-dashboard {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .btn-edit, .btn-delete {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  table, .user-table, .role-table {
+    font-size: 14px;
+  }
+
+  .btn-edit, .btn-delete {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .admin-dashboard {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  table, .user-table, .role-table {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+
+  .user-table, .role-table {
+    display: block;
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+
+  .btn-edit, .btn-delete {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .admin-dashboard {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  table, .user-table, .role-table {
+    font-size: 12px;
+  }
+
+  .btn-edit, .btn-delete {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .user-management, .role-management {
+    margin-bottom: 20px;
+  }
+
+  .admin-dashboard {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .admin-dashboard h1, .admin-dashboard p {
+    font-size: 1.2rem;
+  }
+
+  .admin-dashboard p {
+    margin-bottom: 20px;
+  }
+
+  .user-table select, .role-table select {
+    width: 100%;
+  }
+}

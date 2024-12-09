@@ -49,17 +49,17 @@ const HomePage = () => {
 
       {/* Conditional Rendering for Additional Info */}
       {showAdditionalInfo && (
-        <div className="additional-info">
-          <div className="info-card">
-            <h3>Advanced User Insights</h3>
+        <div className="features-section">
+          <div className="feature">
+            <h2>Advanced User Insights</h2>
             <p>Gain detailed insights into user behavior, activities, and access patterns for better security management.</p>
           </div>
-          <div className="info-card">
-            <h3>Role-Based Reporting</h3>
+          <div className="feature">
+            <h2>Role-Based Reporting</h2>
             <p>Generate comprehensive reports based on roles and permissions, helping you track and audit access controls.</p>
           </div>
-          <div className="info-card">
-            <h3>Customizable Settings</h3>
+          <div className="feature">
+            <h2>Customizable Settings</h2>
             <p>Tailor the system’s user, role, and permission settings to meet the unique needs of your organization.</p>
           </div>
         </div>

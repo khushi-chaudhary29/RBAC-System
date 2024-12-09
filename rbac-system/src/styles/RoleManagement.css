@@ -1,100 +1,145 @@
-/* Role Management Styling */
+/* Role Management */
 .role-management {
-  padding: 30px;
-  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+  width: 85%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(145deg, #f9f9f9, #e6e6e6);
   border-radius: 12px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  /* text-align: center; */
+  box-sizing: border-box;
 }
 
 .role-management:hover {
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* Role Title */
-.role-title {
+/* Heading Style */
+h2 {
+  text-align: center;
   color: #3e4a61;
-  font-size: 2.5rem;
   margin-bottom: 30px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 28px;
+  font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 1px;
   position: relative;
-  transition: color 0.3s ease;
-  text-align: center;  /* Center align the title */
 }
 
-.role-title::after {
+h2::after {
   content: '';
   position: absolute;
   bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
+  width: 60px;
   height: 3px;
   background-color: #ffcb47;
   border-radius: 2px;
 }
 
 /* Role Form */
+.role-title{
+  color:#2a3d66;
+}
 .role-form {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 15px;
-  margin-bottom: 25px;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%; /* Ensure form takes up the full width of the container */
 }
 
-.role-input {
-  padding: 14px 20px;
-  font-size: 16px;
-  font-weight: 500;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  width: 70%;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-.role-input:focus {
-  border-color: #ffcb47;
-  box-shadow: 0 0 8px rgba(255, 203, 71, 0.6);
-  transform: scale(1.02);
-  outline: none;
-}
-
+.role-input,
+.permission-dropdown,
 .role-btn {
-  padding: 14px 28px;
+  width: 100%; /* Make all elements take full width of the container */
+  max-width: 670px; /* Ensure they all have the same max-width */
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Role Button */
+.role-btn {
   background-color: #ffcb47;
   color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 12px 28px;
   font-size: 18px;
   font-weight: 600;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .role-btn:hover {
   background-color: #e0a800;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .role-btn:active {
   background-color: #ff7400;
-  transform: translateY(3px);
+  transform: translateY(2px);
 }
 
-/* Role List */
-.role-list {
-  margin-top: 20px;
+.role-input:focus,
+.permission-dropdown:focus,
+.role-btn:focus {
+  border-color: #ffcb47;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 203, 71, 0.5);
 }
 
+/* Permissions Section */
+.permissions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center permissions */
+  width: 100%; /* Make sure this section takes full width */
+}
+
+/* Permission Checkbox */
+.permission-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.permission-checkbox input {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.permission-checkbox input:checked {
+  background-color: #ffcb47;
+  transform: scale(1.1);
+}
+
+.permission-checkbox input:hover {
+  background-color: #ff9f00;
+}
+
+/* Role Table */
 .role-table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #fafafa;
+  border-radius: 8px;
+  max-width: 670px; /* Ensure it matches the width of other elements */
 }
 
 .role-table th, .role-table td {
@@ -111,21 +156,23 @@
 }
 
 .role-table td {
-  background-color: #fafafa;
   font-size: 16px;
   color: #333;
 }
 
-/* Edit Button */
+/* Edit and Delete Buttons */
+.btn-edit, .btn-delete {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
 .btn-edit {
   background-color: #ffc107;
   color: white;
-  padding: 8px 16px;  /* Same padding as the delete button */
-  font-size: 16px;    /* Same font size as the delete button */
-  border: none;
-  border-radius: 10px;  /* Same border-radius as the delete button */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-edit:hover {
@@ -138,16 +185,9 @@
   transform: translateY(3px);
 }
 
-/* Delete Button */
 .btn-delete {
   background-color: #dc3545;
   color: white;
-  padding: 8px 16px;  /* Same padding as the edit button */
-  font-size: 16px;    /* Same font size as the edit button */
-  border: none;
-  border-radius: 10px;  /* Same border-radius as the edit button */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-delete:hover {
@@ -160,7 +200,6 @@
   transform: translateY(3px);
 }
 
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .role-management {
@@ -169,16 +208,21 @@
   }
 
   .role-form {
-    gap: 10px;
+    gap: 15px;
   }
 
   .role-btn {
-    padding: 12px 24px;
+    padding: 10px 22px;
     font-size: 16px;
   }
 
-  .role-input {
+  .permissions {
+    gap: 15px;
+  }
+
+  .role-table th, .role-table td {
     font-size: 14px;
+    padding: 12px;
   }
 }
 
@@ -187,17 +231,17 @@
     padding: 15px;
   }
 
-  .role-form {
-    flex-direction: column;
+  .permissions {
+    gap: 15px;
   }
 
   .role-btn {
-    padding: 10px 20px;
+    padding: 8px 20px;
     font-size: 14px;
   }
 
-  .role-input {
-    padding: 12px;
+  .role-table th, .role-table td {
     font-size: 14px;
+    padding: 10px;
   }
 }

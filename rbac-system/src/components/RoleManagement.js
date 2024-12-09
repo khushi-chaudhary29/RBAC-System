@@ -62,9 +62,10 @@ const RoleManagement = ({ addRole, roles: initialRoles = [] }) => {
   const handleDeleteRole = (roleId) => {
     if (window.confirm('Are you sure you want to delete this role?')) {
       const updatedRoles = roles.filter((role) => role.id !== roleId);
-      setRoles(updatedRoles); // Update local state by removing the role
+      setRoles(updatedRoles); // Update local state
+      localStorage.setItem('roles', JSON.stringify(updatedRoles)); // Update localStorage
     }
-  };
+  };  
 
   // Handle permission selection
   const handlePermissionChange = (e) => {
@@ -106,7 +107,7 @@ const RoleManagement = ({ addRole, roles: initialRoles = [] }) => {
       </form>
 
       {/* Existing Roles Table */}
-      <h4>Existing Roles</h4>
+      <h3 className="role-title">Existing Roles</h3>
       <div className="role-table">
         {roles && roles.length > 0 ? (
           <table>
